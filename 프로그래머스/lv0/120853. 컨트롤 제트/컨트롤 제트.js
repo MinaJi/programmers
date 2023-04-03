@@ -1,15 +1,13 @@
 function solution(s) {
     var answer = 0;
-    var tmp = [];
+    let newArr = [];
+    newArr = s.split(' ');
 
-    tmp = s.split(' ');
-
-    for(let i=0; i<tmp.length; i++){
-
-        if(tmp[i] == "Z"){
-            answer -= parseInt(tmp[i-1]);
+    for(let i=0; i<newArr.length; i++){
+        if(newArr[i] !== "Z"){
+            answer += parseInt(newArr[i]);
         } else {
-            answer += parseInt(tmp[i]);
+            answer -= parseInt(newArr[i-1]);
         }
     }
 
