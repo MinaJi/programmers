@@ -6,7 +6,6 @@ function solution(num, k) {
     if(answer === -1) {
         return answer;
     } else {
-        return answer + 1
+        return answer + 1;
     }
-    return answer;
 }
