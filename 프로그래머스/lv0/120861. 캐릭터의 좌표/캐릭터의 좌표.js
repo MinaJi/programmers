@@ -5,16 +5,16 @@ function solution(keyinput, board) {
     keyinput.forEach((move) => {
         switch (move) {
             case "up":
-                if (!(answer[1] === boardSize[1])) answer[1]++;
+                if (answer[1] !== boardSize[1]) answer[1]++;
                 break;
             case "down":
-                if (!(answer[1] === -boardSize[1])) answer[1]--;
+                if (answer[1] !== -boardSize[1]) answer[1]--;
                 break;
             case "left":
-                if (!(answer[0] === -boardSize[0])) answer[0]--;
+                if (answer[0] !== -boardSize[0]) answer[0]--;
                 break;
             case "right":
-                if (!(answer[0] === boardSize[0])) answer[0]++;
+                if (answer[0] !== boardSize[0]) answer[0]++;
                 break;
         }
     });
